@@ -55,27 +55,4 @@ function writeText(){
 }
 
 // *****************light box gallery*********************
-
-$(function () {
-    $("#mdb-lightbox-ui").load("mdb-addons/mdb-lightbox-ui.html");
-    });
-
-    // *************Radial Percetage******************
-
-
-    let options = {
-      startAngle: -1.515,
-      size: 150,
-      value: 0.85,
-      fill: {gradient: ['black', 'black']}
-    }
-    $(".circle .bar").circleProgress(options).on('circle-animation-progress',
-    function(event, progress, stepValue){
-      $(this).parent().find("span").text(String(stepValue.toFixed(2).substr(2)) + "%");
-    });
-    $(".js .bar").circleProgress({
-      value: 0.70
-    });
-    $(".react .bar").circleProgress({
-      value:0.60
-    });
+baguetteBox.run('.tz-gallery');
